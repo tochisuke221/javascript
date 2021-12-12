@@ -478,3 +478,106 @@
 
 //DOMについて
 
+// {
+//   function update(){
+//     // document.querySelector('h1').textContent = 'Changed!';
+//     // document.getElementById('target').textContent = 'Changed!';
+//     document.querySelectorAll('p').forEach(function(p, index){
+//       p.textContent = index + '番目です'
+//     });
+//   }
+
+//   setTimeout(update, 1000);
+// }
+
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//     const targetNode = document.getElementById('target');
+
+//     targetNode.textContent = 'Changed!';
+//     targetNode.title = 'タイトル属性です';
+//     targetNode.style.backgroundColor = 'red';
+//   });
+// }
+
+// { 
+//   document.querySelector('button').addEventListener('click', () => {
+//     const targetNode = document.getElementById('target');
+
+//     targetNode.textContent = targetNode.dataset.translation;
+//   });
+// }
+
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//    const item2 = document.createElement('li');
+//    item2.textContent = "追記したリスト";
+
+//    const ul = document.querySelector('ul');
+
+//    ul.appendChild(item2);
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//    const item0 = document.querySelectorAll('li')[0];
+//    const copy = item0.cloneNode(true);
+
+//    const ul = document.querySelector('ul');
+//    const item2 = document.querySelectorAll('li')[2];
+ 
+//    ul.insertBefore(copy, item2);
+//   });
+// }
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//    const item1 = document.querySelectorAll('li')[1];
+
+//    item1.removeChild(item1);
+//   });
+// }
+
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//     const li = document.createElement('li');
+//     const text = document.querySelector('input');
+
+//     li.textContent = text.value;
+//     document.querySelector('ul').appendChild(li);
+//     text.value = '';
+//     text.focus();
+//   });
+// }
+
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//     const li = document.createElement('li');
+//     const color = document.querySelector('select');
+//     li.textContent = `${color.value} - ${color.selectedIndex}`
+//     document.querySelector('ul').appendChild(li);
+//   });
+// }
+
+// {
+//   document.querySelector('button').addEventListener('click', () => {
+//     const colors = document.querySelectorAll('input');
+//     let selectedColor;
+
+//     colors.forEach(color => {
+//       if (color.checked) {
+//         selectedColor = color.value;
+//       }
+//     });
+
+//     const li = document.createElement('li');
+//     li.textContent = selectedColor;
+//     document.querySelector('ul').appendChild(li);
+//   });
+// }
+
+{
+  document.querySelector('form').addEventListener('submit', e=>{
+    e.preventDefault();
+    console.log('submit');
+  });
+}
