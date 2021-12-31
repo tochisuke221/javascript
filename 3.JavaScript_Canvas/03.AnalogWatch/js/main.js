@@ -9,15 +9,19 @@
     }
 
     draw(angle, func) {
+      //初期の座標空間を保存
       this.ctx.save();
 
+      //座標空間を回転
       this.ctx.translate(this.width / 2, this.height / 2);
       this.ctx.rotate(Math.PI / 180 * angle);
 
+      //funcの処理を実施
       this.ctx.beginPath();
       func(this.ctx);
       this.ctx.stroke();
 
+      //初期の座標空間に戻す
       this.ctx.restore();
     }
 
@@ -32,6 +36,7 @@
       this.drawer = drawer;
     }
 
+    //盤面を書く指示
     drawFace() {
       for (let angle = 0; angle < 360; angle += 6) {
         this.drawer.draw(angle, ctx => {
@@ -49,6 +54,7 @@
       }
     }
 
+    //針を書く指示
     drawHands(){
       //hour
       this.drawer.draw(this.h * 30 + this.m * 0.5, ctx=>{
